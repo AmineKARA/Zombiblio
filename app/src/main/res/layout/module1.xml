@@ -20,7 +20,7 @@
         android:textSize="36sp" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/question"
         android:layout_width="463dp"
         android:layout_height="408dp"
         android:layout_alignParentStart="true"
@@ -33,7 +33,7 @@
         android:layout_marginEnd="217dp"
         android:layout_marginRight="217dp"
         android:layout_marginBottom="467dp"
-        android:background="#FF0000" />
+        android:background="#FD4A4A" />
 
     <TextView
         android:id="@+id/textView4"
