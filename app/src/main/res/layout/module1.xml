@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
     <TextView
         android:id="@+id/textView3"
@@ -33,20 +34,21 @@
         android:layout_marginEnd="217dp"
         android:layout_marginRight="217dp"
         android:layout_marginBottom="467dp"
-        android:background="#FD4A4A" />
+        android:background="#FFFFFF"
+        app:srcCompat="@drawable/question" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="348dp"
-        android:layout_height="51dp"
+        android:layout_width="548dp"
+        android:layout_height="53dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="167dp"
-        android:layout_marginEnd="-104dp"
-        android:layout_marginRight="-104dp"
-        android:layout_marginBottom="873dp"
+        android:layout_marginStart="174dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginRight="81dp"
+        android:layout_marginBottom="882dp"
         android:text="Vous devez retrouver le mot suivant :"
         android:textSize="18sp"
         android:textStyle="bold|italic" />
@@ -83,5 +85,41 @@
         android:text="Valider"
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="186dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="444dp"
+        android:layout_marginBottom="213dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/numPage"
+        android:layout_width="175dp"
+        android:layout_height="99dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="692dp"
+        android:fontFamily="@font/shlop"
+        android:text="TextView"
+        android:textColor="#62FF00"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/numMot"
+        android:layout_width="175dp"
+        android:layout_height="99dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="284dp"
+        android:layout_marginBottom="614dp"
+        android:fontFamily="@font/shlop"
+        android:text="TextView"
+        android:textColor="#62FF00"
+        android:textSize="50sp" />
 
 </RelativeLayout>
