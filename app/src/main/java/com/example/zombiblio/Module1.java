@@ -30,6 +30,8 @@ public class Module1 extends AppCompatActivity {
 
         ImageView question = (ImageView) findViewById(R.id.question);
 
+        new GetQuestion().execute();
+
         new CountDownTimer(60000, 1000) {
 
             TextView counter = (TextView)  findViewById(R.id.counter);
