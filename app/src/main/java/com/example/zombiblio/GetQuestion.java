@@ -18,8 +18,9 @@ public class GetQuestion extends AsyncTask {
         HttpURLConnection connection = null;
         BufferedReader reader = null;
 
+        Log.d("test: ", "test");
         try {
-            URL url = new URL("https://jsonplaceholder.typicode.com/todos/1");
+            URL url = new URL("https://zombiblio.000webhostapp.com/test.php");
             connection = (HttpURLConnection) url.openConnection();
             connection.connect();
 
@@ -33,7 +34,7 @@ public class GetQuestion extends AsyncTask {
 
             while ((line = reader.readLine()) != null) {
                 buffer.append(line+"\n");
-                Log.d("Response: ", "> " + line);   //here u ll get whole response...... :-)
+                Log.d("Response ", "> " + line);   //here u ll get whole response...... :-)
 
             }
 
