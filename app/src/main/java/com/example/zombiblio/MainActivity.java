@@ -17,13 +17,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.intro);
 
         MainListener obs = new MainListener(this);
 
 
-        ImageButton module1 = (ImageButton) findViewById(R.id.imageModule1);
+        Button start_button = (Button) findViewById(R.id.start);
 
-        module1.setOnClickListener(obs);
+        start_button.setOnClickListener(obs);
     }
 }
