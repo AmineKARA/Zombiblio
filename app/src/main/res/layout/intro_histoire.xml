@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/prec"
-        android:layout_width="131dp"
-        android:layout_height="41dp"
+        android:layout_width="149dp"
+        android:layout_height="58dp"
         android:backgroundTint="#673AB7"
         android:fontFamily="@font/shlop"
         android:text="Precedent"
@@ -18,15 +18,15 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.918" />
+        app:layout_constraintVertical_bias="0.947" />
 
     <Button
         android:id="@+id/fin"
-        android:layout_width="131dp"
-        android:layout_height="41dp"
+        android:layout_width="149dp"
+        android:layout_height="58dp"
         android:backgroundTint="#673AB7"
         android:fontFamily="@font/shlop"
         android:text="Terminer"
@@ -34,15 +34,15 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.799"
+        app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.918" />
+        app:layout_constraintVertical_bias="0.946" />
 
     <Button
         android:id="@+id/suiv"
-        android:layout_width="131dp"
-        android:layout_height="41dp"
+        android:layout_width="149dp"
+        android:layout_height="58dp"
         android:backgroundTint="#673AB7"
         android:fontFamily="@font/shlop"
         android:text="Suivant"
@@ -50,10 +50,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.918" />
+        app:layout_constraintVertical_bias="0.946" />
 
     <ImageView
         android:id="@+id/image"

@@ -80,21 +80,30 @@
         android:layout_marginEnd="455dp"
         android:layout_marginRight="455dp"
         android:layout_marginBottom="277dp"
-        android:background="#2075C2"
+        android:background="#5C297D"
+        android:fontFamily="@font/shlop"
         android:shadowColor="#000000"
         android:text="Valider"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp" />
+        android:textColor="#25FF00"
+        android:textSize="36sp" />
 
-    <TextView
-        android:id="@+id/counter"
-        android:layout_width="186dp"
-        android:layout_height="37dp"
+
+    <Button
+        android:id="@+id/retour"
+        android:layout_width="170dp"
+        android:layout_height="71dp"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="444dp"
-        android:layout_marginBottom="213dp"
-        android:text="TextView" />
+        android:layout_marginEnd="171dp"
+        android:layout_marginRight="171dp"
+        android:layout_marginBottom="275dp"
+        android:background="#5C297D"
+        android:fontFamily="@font/shlop"
+        android:shadowColor="#000000"
+        android:text="Retour"
+        android:textColor="#25FF00"
+        android:textSize="36sp" />
 
     <TextView
         android:id="@+id/numPage"
@@ -106,6 +115,7 @@
         android:layout_marginBottom="692dp"
         android:fontFamily="@font/shlop"
         android:text="TextView"
+        android:rotation="-5"
         android:textColor="#62FF00"
         android:textSize="50sp" />
 
@@ -119,7 +129,31 @@
         android:layout_marginBottom="614dp"
         android:fontFamily="@font/shlop"
         android:text="TextView"
+        android:rotation="-5"
         android:textColor="#62FF00"
         android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="193dp"
+        android:layout_height="94dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="322dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="285dp"
+        android:layout_marginBottom="1112dp"
+        android:fontFamily="@font/shlop"
+        android:text="TextView"
+        android:textColor="#5C297D"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.178" />
 
 </RelativeLayout>

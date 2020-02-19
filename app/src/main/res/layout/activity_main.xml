@@ -60,4 +60,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.051" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="193dp"
+        android:layout_height="94dp"
+        android:fontFamily="@font/shlop"
+        android:text="TextView"
+        android:textColor="#5C297D"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.178" />
 </androidx.constraintlayout.widget.ConstraintLayout>

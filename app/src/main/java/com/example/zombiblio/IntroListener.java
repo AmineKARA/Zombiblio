@@ -30,13 +30,13 @@ public class IntroListener implements View.OnClickListener {
 
             if(this.id<7){
                 //ECRAN D'INTRO SUIVANT
-                Toast.makeText(context, "Page d'introduciton suivante", Toast.LENGTH_LONG).show();
+                //Toast.makeText(context, "Page d'introduciton suivante", Toast.LENGTH_LONG).show();
                 ImageView intro =(ImageView) this.intro.findViewById(R.id.image);
                 intro.setImageResource(this.myDrawIntro[id+1]);
                 this.id++;
             }else{
                 //ACCES AU MENU DES MODULES
-                Toast.makeText(context, "Redirection vers les modules", Toast.LENGTH_LONG).show();
+                //Toast.makeText(context, "Redirection vers les modules", Toast.LENGTH_LONG).show();
                 Intent moduleMenu = new Intent(this.context , ModuleMenu.class);
                 this.context.startActivity(moduleMenu);
             }
@@ -47,13 +47,13 @@ public class IntroListener implements View.OnClickListener {
 
             if(this.id!=0) {
                 //ECRAN D'INTRO PRECEDENT
-                Toast.makeText(context, "Retour à la page précedente", Toast.LENGTH_LONG).show();
+                //Toast.makeText(context, "Retour à la page précedente", Toast.LENGTH_LONG).show();
                 ImageView intro = (ImageView) this.intro.findViewById(R.id.image);
                 intro.setImageResource(this.myDrawIntro[id - 1]);
                 this.id--;
             }else{
                 //RETOUR A L'ACCEUIL
-                Toast.makeText(context, "Retour à l'acceuil", Toast.LENGTH_LONG).show();
+                //Toast.makeText(context, "Retour à l'acceuil", Toast.LENGTH_LONG).show();
                 Intent acceuil = new Intent(this.context , MainActivity.class);
                 this.context.startActivity(acceuil);
             }

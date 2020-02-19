@@ -3,6 +3,9 @@ package com.example.zombiblio;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,7 +23,7 @@ public class GetQuestion extends AsyncTask {
 
         Log.d("test: ", "test");
         try {
-            URL url = new URL("https://zombiblio.000webhostapp.com/test.php");
+            URL url = new URL("https://zombiblio.000webhostapp.com/connect.php");
             connection = (HttpURLConnection) url.openConnection();
             connection.connect();
 
@@ -31,12 +34,14 @@ public class GetQuestion extends AsyncTask {
 
             StringBuffer buffer = new StringBuffer();
             String line = "";
+            int i=0;
 
             while ((line = reader.readLine()) != null) {
+
                 buffer.append(line+"\n");
                 Log.d("Response ", "> " + line);   //here u ll get whole response...... :-)
-
             }
+
 
             return buffer.toString();
 
