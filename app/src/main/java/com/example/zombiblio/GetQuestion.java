@@ -39,11 +39,28 @@ public class GetQuestion extends AsyncTask {
             while ((line = reader.readLine()) != null) {
 
                 buffer.append(line+"\n");
-                Log.d("Response ", "> " + line);   //here u ll get whole response...... :-)
+                //Log.d("Response ", "> " + line);   //here u ll get whole response...... :-)
             }
 
+            String[] separated = buffer.toString().split("/");
 
-            return buffer.toString();
+            int cle_requete = 0, cle_valeur =0;
+
+            String[][] arr_questions;
+
+            for (int z=0; z<separated.length; z++){
+
+                Log.d("Value", separated[z]);
+
+                if(separated[z]!="end_req"){
+
+
+                }
+
+
+            }
+            
+            return separated;
 
 
         } catch (MalformedURLException e) {
