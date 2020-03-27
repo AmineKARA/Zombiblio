@@ -31,7 +31,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053"
+        app:layout_constraintVertical_bias="0.039"
         app:srcCompat="@drawable/image_accueil" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="160dp"
+        android:layout_height="72dp"
+        android:backgroundTint="#673AB7"
+        android:fontFamily="@font/shlop"
+        android:text="Update"
+        android:textColor="#60F521"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
