@@ -1,5 +1,6 @@
 package com.example.zombiblio;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -14,6 +15,11 @@ import android.widget.TextView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
@@ -49,8 +55,11 @@ public class ModuleMenu extends AppCompatActivity {
         System.out.println(value);
 
 
+        Log.d("Lec result", lireFichier("informatique_module1.txt"));
+
 
         new CountDownTimer(900000000, 1000) {
+            //new CountDownTimer(10000, 1000) {
 
             TextView counter = (TextView)  findViewById(R.id.timer);
 
@@ -72,9 +81,51 @@ public class ModuleMenu extends AppCompatActivity {
             }
 
             public void onFinish() {
-                counter.setText("done!");
+                Intent perdu = new Intent(ModuleMenu.this , Perdu.class);
+                ModuleMenu.this.startActivity(perdu);
+                //counter.setText("done!");
             }
         }.start();
     }
 
+
+    public String lireFichier(String name)
+    {
+        FileInputStream fileInputStream = null;
+        StringBuilder stringBuilder = null;
+
+        try {
+            fileInputStream = openFileInput(name);
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+            stringBuilder = new StringBuilder();
+            String line;
+
+            while((line = bufferedReader.readLine()) != null){
+                stringBuilder.append(line + "\n");
+            }
+
+            //Log.d("RES :", line.toString());
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fileInputStream != null)
+                try {
+                    fileInputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+        }
+
+        if (stringBuilder != null) {
+            System.out.println(stringBuilder);
+            return String.valueOf(stringBuilder);
+        }else
+            System.err.println("stringBuilder est null");
+        return "vide";
+    }
 }

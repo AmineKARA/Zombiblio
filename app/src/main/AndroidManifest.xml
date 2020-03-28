@@ -28,6 +28,8 @@
         <activity android:name=".ModuleMenu" ></activity>
 
         <activity android:name=".SelectFiliere" ></activity>
+
+        <activity android:name=".Perdu" ></activity>
     </application>
 
 

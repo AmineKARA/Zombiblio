@@ -61,8 +61,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        String str;
+        String str, str_question;
         GetFiliere test = new GetFiliere();
+        GetQuestion question = new GetQuestion("informatique");
 
         if(isNetworkAvailable()){
             try {
@@ -77,6 +78,21 @@ public class MainActivity extends AppCompatActivity {
                 editor.apply();
 
                 ecrireFichier("filiere.txt", str);
+
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            try {
+                question.execute().get();
+
+                str_question = question.getResponseMsg();
+
+                Log.d("Question", str_question);
+                ecrireFichier("informatique_module1.txt", str_question);
+
 
             } catch (ExecutionException e) {
                 e.printStackTrace();
@@ -117,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
                 }
         }
     }
+
 
 
 

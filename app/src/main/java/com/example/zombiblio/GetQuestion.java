@@ -16,14 +16,22 @@ import java.net.URL;
 
 
 public class GetQuestion extends AsyncTask {
+    String[] test;
+    String value;
+    String filiere;
+
+    public  GetQuestion(String f){
+
+        this.filiere = f;
+    }
+
     @Override
     protected Object doInBackground(Object[] objects) {
         HttpURLConnection connection = null;
         BufferedReader reader = null;
 
-        Log.d("test: ", "test");
         try {
-            URL url = new URL("https://zombiblio.000webhostapp.com/connect.php");
+            URL url = new URL("https://zombiblioevry.000webhostapp.com/script_php_android/get_question_module1.php?filiere="+this.filiere);
             connection = (HttpURLConnection) url.openConnection();
             connection.connect();
 
@@ -50,17 +58,11 @@ public class GetQuestion extends AsyncTask {
 
             for (int z=0; z<separated.length; z++){
 
-                Log.d("Value", separated[z]);
-
-                if(separated[z]!="end_req"){
-
-
-                }
-
-
+                //Log.d("QUESTION", separated[z]);
             }
-            
-            return separated;
+            test=separated;
+            this.value = buffer.toString();
+            return true;
 
 
         } catch (MalformedURLException e) {
@@ -80,5 +82,10 @@ public class GetQuestion extends AsyncTask {
             }
         }
         return null;
+    }
+
+
+    public String getResponseMsg(){
+        return this.value;
     }
 }
