@@ -25,7 +25,6 @@ public class MainListener implements View.OnClickListener {
 
         if(v.getId() == R.id.imageModule1){
 
-            Toast.makeText(context, "Vous accèdez au module n°1", Toast.LENGTH_LONG).show();
             Intent intentMod1 = new Intent(this.context , Module1.class);
             this.context.startActivity(intentMod1);
         }
@@ -33,7 +32,6 @@ public class MainListener implements View.OnClickListener {
         if(v.getId() == R.id.start){
 
 
-            Toast.makeText(context, "Que l'aventure commence!", Toast.LENGTH_LONG).show();
             Intent intentMod1 = new Intent(this.context , Intro.class);
             this.context.startActivity(intentMod1);
         }

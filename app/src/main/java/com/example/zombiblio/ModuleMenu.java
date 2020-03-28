@@ -45,17 +45,19 @@ public class ModuleMenu extends AppCompatActivity {
         MainListener obs = new MainListener(this);
 
 
-        ImageButton module1 = (ImageButton) findViewById(R.id.imageModule1);
+        SharedPreferences prefs = getApplicationContext().getSharedPreferences("Time", MODE_PRIVATE);
 
+
+
+
+
+        ImageButton module1 = (ImageButton) findViewById(R.id.imageModule1);
         module1.setOnClickListener(obs);
 
-        SharedPreferences prefs = getApplicationContext().getSharedPreferences("Time", MODE_PRIVATE);
+
         String value = prefs.getString("filiere_selectionne", "");
 
         System.out.println(value);
-
-
-        Log.d("Lec result", lireFichier("informatique_module1.txt"));
 
 
         new CountDownTimer(900000000, 1000) {
@@ -78,6 +80,11 @@ public class ModuleMenu extends AppCompatActivity {
                 SharedPreferences prefs = getApplicationContext().getSharedPreferences("Time", MODE_PRIVATE);
                 long milis = prefs.getLong("milis", 0); //0 is the default value.
                 //Log.d("SHARED","Value :"+milis);
+
+                ImageButton module1 = (ImageButton) findViewById(R.id.imageModule1);
+                if(prefs.getInt("module1_win",0)==1){
+                    module1.setImageResource(R.drawable.gagner_petit);
+                }
             }
 
             public void onFinish() {
@@ -89,43 +96,6 @@ public class ModuleMenu extends AppCompatActivity {
     }
 
 
-    public String lireFichier(String name)
-    {
-        FileInputStream fileInputStream = null;
-        StringBuilder stringBuilder = null;
 
-        try {
-            fileInputStream = openFileInput(name);
-            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
-            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
-            stringBuilder = new StringBuilder();
-            String line;
-
-            while((line = bufferedReader.readLine()) != null){
-                stringBuilder.append(line + "\n");
-            }
-
-            //Log.d("RES :", line.toString());
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (fileInputStream != null)
-                try {
-                    fileInputStream.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-        }
-
-        if (stringBuilder != null) {
-            System.out.println(stringBuilder);
-            return String.valueOf(stringBuilder);
-        }else
-            System.err.println("stringBuilder est null");
-        return "vide";
-    }
 }

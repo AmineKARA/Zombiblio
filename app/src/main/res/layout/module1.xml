@@ -22,18 +22,18 @@
 
     <ImageView
         android:id="@+id/question"
-        android:layout_width="463dp"
-        android:layout_height="408dp"
+        android:layout_width="580dp"
+        android:layout_height="450dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="169dp"
-        android:layout_marginLeft="169dp"
-        android:layout_marginEnd="217dp"
-        android:layout_marginRight="217dp"
-        android:layout_marginBottom="467dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginLeft="81dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginRight="146dp"
+        android:layout_marginBottom="437dp"
         android:background="#FFFFFF"
         app:srcCompat="@drawable/question" />
 
@@ -54,7 +54,7 @@
         android:textStyle="bold|italic" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/reponse"
         android:layout_width="467dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -71,7 +71,7 @@
         android:textColorLink="#2073AA" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/valider"
         android:layout_width="170dp"
         android:layout_height="71dp"
         android:layout_alignParentEnd="true"
@@ -111,13 +111,14 @@
         android:layout_height="99dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="280dp"
-        android:layout_marginBottom="692dp"
-        android:fontFamily="@font/shlop"
-        android:text="TextView"
+        android:layout_marginEnd="298dp"
+        android:layout_marginBottom="688dp"
+        android:fontFamily="@font/astonished"
         android:rotation="-5"
+        android:text="PAGE"
         android:textColor="#62FF00"
-        android:textSize="50sp" />
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/numMot"
@@ -125,13 +126,14 @@
         android:layout_height="99dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="284dp"
-        android:layout_marginBottom="614dp"
-        android:fontFamily="@font/shlop"
-        android:text="TextView"
+        android:layout_marginEnd="237dp"
+        android:layout_marginBottom="598dp"
+        android:fontFamily="@font/astonished"
         android:rotation="-5"
+        android:text="ÈME MOT"
         android:textColor="#62FF00"
-        android:textSize="50sp" />
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/timer"
@@ -155,5 +157,106 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.178" />
+
+    <TextView
+        android:id="@+id/nb"
+        android:layout_width="120dp"
+        android:layout_height="77dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="349dp"
+        android:layout_marginBottom="615dp"
+        android:fontFamily="@font/astonished"
+        android:rotation="-5"
+        android:text="NB"
+        android:textColor="#62FF00"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nb_p"
+        android:layout_width="120dp"
+        android:layout_height="77dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="259dp"
+        android:layout_marginBottom="717dp"
+        android:fontFamily="@font/astonished"
+        android:rotation="-5"
+        android:text="NB"
+        android:textColor="#62FF00"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/coteA"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="516dp"
+        android:layout_marginBottom="756dp"
+        android:fontFamily="@font/astonished"
+        android:rotation="2"
+        android:textColor="#62FF00"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/coteB"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="514dp"
+        android:layout_marginBottom="687dp"
+        android:fontFamily="@font/astonished"
+        android:rotation="2"
+        android:textColor="#62FF00"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/coteC"
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="513dp"
+        android:layout_marginBottom="617dp"
+        android:fontFamily="@font/astonished"
+        android:rotation="2"
+        android:textColor="#62FF00"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/coteD"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="511dp"
+        android:layout_marginBottom="547dp"
+        android:fontFamily="@font/astonished"
+        android:rotation="2"
+        android:textColor="#62FF00"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/coteE"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="516dp"
+        android:layout_marginBottom="473dp"
+        android:fontFamily="@font/astonished"
+        android:rotation="2"
+        android:textColor="#62FF00"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>

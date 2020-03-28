@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences prefs = getApplicationContext().getSharedPreferences("Time", MODE_PRIVATE);
+        prefs.edit().clear().commit();
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -63,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         String str, str_question;
         GetFiliere test = new GetFiliere();
-        GetQuestion question = new GetQuestion("informatique");
+
 
         if(isNetworkAvailable()){
             try {
@@ -84,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
+            GetQuestion question = new GetQuestion("informatique");
 
             try {
                 question.execute().get();

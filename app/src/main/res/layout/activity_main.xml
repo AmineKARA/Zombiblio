@@ -9,8 +9,9 @@
 
     <ImageButton
         android:id="@+id/imageModule1"
-        android:layout_width="357dp"
+        android:layout_width="362dp"
         android:layout_height="303dp"
+        android:backgroundTint="#000000"
         android:src="@drawable/m1_vignette"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,15 +23,63 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="369dp"
-        android:layout_height="304dp"
+        android:layout_width="372dp"
+        android:layout_height="306dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintHorizontal_bias="0.969"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.299"
+        app:layout_constraintVertical_bias="0.296"
         app:srcCompat="@drawable/m2_vignette" />
+
+    <ImageButton
+        android:id="@+id/imagem3"
+        android:layout_width="362dp"
+        android:layout_height="294dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617"
+        app:srcCompat="@drawable/m3_vignette" />
+
+    <ImageButton
+        android:id="@+id/imagem4"
+        android:layout_width="371dp"
+        android:layout_height="294dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617"
+        app:srcCompat="@drawable/m4_vignette" />
+
+    <ImageButton
+        android:id="@+id/imagem5"
+        android:layout_width="365dp"
+        android:layout_height="298dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939"
+        app:srcCompat="@drawable/m5_vignette" />
+
+    <ImageButton
+        android:id="@+id/imagem6"
+        android:layout_width="373dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94"
+        app:srcCompat="@drawable/m6_vignette" />
 
     <TextView
         android:id="@+id/title"
