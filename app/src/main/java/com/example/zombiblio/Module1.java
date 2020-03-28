@@ -52,7 +52,7 @@ public class Module1 extends AppCompatActivity {
 
         ImageView question = (ImageView) findViewById(R.id.question);
 
-        new GetQuestion().execute();
+        //new GetQuestion().execute();
 
 
         //GESTION CLIQUE RETOUR

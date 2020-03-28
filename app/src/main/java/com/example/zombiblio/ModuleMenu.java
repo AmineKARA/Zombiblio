@@ -43,8 +43,10 @@ public class ModuleMenu extends AppCompatActivity {
 
         module1.setOnClickListener(obs);
 
+        SharedPreferences prefs = getApplicationContext().getSharedPreferences("Time", MODE_PRIVATE);
+        String value = prefs.getString("filiere_selectionne", "");
 
-
+        System.out.println(value);
 
 
 

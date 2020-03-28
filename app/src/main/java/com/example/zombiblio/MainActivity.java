@@ -3,7 +3,11 @@ package com.example.zombiblio;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +19,15 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.concurrent.CancellationException;
+import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,7 +52,72 @@ public class MainActivity extends AppCompatActivity {
 
 
         start_button.setOnClickListener(obs);
+
+
+
+
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        String str;
+        GetFiliere test = new GetFiliere();
+
+        if(isNetworkAvailable()){
+            try {
+                test.execute().get();
+
+                str = test.getResponseMsg();
+
+                Log.d("Value", str);
+
+                SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences("Time", MODE_PRIVATE).edit();
+                editor.putString("filiere", str);
+                editor.apply();
+
+                ecrireFichier("filiere.txt", str);
+
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+
+    public void ecrireFichier(String name, String value)
+    {
+        String contenu = value;
+
+        FileOutputStream fileOutputStream = null;
+        try {
+            fileOutputStream = openFileOutput(name, Context.MODE_PRIVATE);
+            fileOutputStream.write(contenu.getBytes());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fileOutputStream != null)
+                try {
+                    fileOutputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+        }
+    }
+
 
 
 }
