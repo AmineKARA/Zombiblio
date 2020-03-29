@@ -18,14 +18,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-public class Module4 extends AppCompatActivity {
+public class Module5 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         decorView.setSystemUiVisibility(uiOptions);
@@ -35,14 +35,51 @@ public class Module4 extends AppCompatActivity {
         actionBar.hide();
 
 
-        setContentView(R.layout.module4);
 
         SharedPreferences prefs = getApplicationContext().getSharedPreferences("Time", MODE_PRIVATE);
 
 
-        if(prefs.getInt("module4_win",0)==1){
+        /* GESTION AVANCEMENT */
+
+        SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences("Time", MODE_PRIVATE).edit();
+
+
+        if(prefs.getInt("module5_win",0)==1){
+            setContentView(R.layout.module5p6);
             delete_item();
         }
+
+
+        if(!prefs.contains("m5_page")){
+            editor.putInt("m5_page", 0);
+            editor.apply();
+        }
+
+
+        if(prefs.getInt("m5_page",0)==0){
+            setContentView(R.layout.module5);
+
+        }
+
+        if(prefs.getInt("m5_page",0)==1){
+            setContentView(R.layout.module5p2);
+        }
+
+        if(prefs.getInt("m5_page",0)==2){
+            setContentView(R.layout.module5p3);
+        }
+
+        if(prefs.getInt("m5_page",0)==3){
+            setContentView(R.layout.module5p4);
+        }
+
+        if(prefs.getInt("m5_page",0)==4){
+            setContentView(R.layout.module5p5);
+        }
+        if(prefs.getInt("m5_page",0)==5){
+            setContentView(R.layout.module5p6);
+        }
+        /*--------------------*/
 
 
         /*GESTION VALIDATION CLIQUE*/
@@ -53,35 +90,28 @@ public class Module4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                EditText etage = findViewById(R.id.etage);
-                String val_etage =  etage.getText().toString();
-                EditText livre = findViewById(R.id.nblivre);
-                String val_livre =  livre.getText().toString();
-                EditText semaine = findViewById(R.id.temps);
-                String val_semaine =  semaine.getText().toString();
+
+
+
                 SharedPreferences prefs = getApplicationContext().getSharedPreferences("Time", MODE_PRIVATE);
 
+                SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences("Time", MODE_PRIVATE).edit();
+                editor.putInt("m5_page", prefs.getInt("m5_page",0)+1);
+                editor.apply();
 
-                if(val_etage.equals("0") && val_livre.equals("8") && val_semaine.equals("3")){
+                if(prefs.getInt("m5_page",0)==6){
 
-                    SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences("Time", MODE_PRIVATE).edit();
-                    editor.putInt("module4_win",1);
+                    editor.putInt("module5_win", 1);
                     editor.apply();
-                    delete_item();
                 }
 
-
-                etage.getText().clear();
-                livre.getText().clear();
-                semaine.getText().clear();
+                finish();
+                startActivity(getIntent());
 
             }
         });
 
         /*-------------------------*/
-
-
-
 
 
         //GESTION CLIQUE RETOUR
@@ -108,30 +138,23 @@ public class Module4 extends AppCompatActivity {
             }
 
             public void onFinish() {
-                Intent perdu = new Intent(Module4.this , Perdu.class);
-                Module4.this.startActivity(perdu);
+                Intent perdu = new Intent(Module5.this , Perdu.class);
+                Module5.this.startActivity(perdu);
                 //counter.setText("done!");
             }
         }.start();
-
-
     }
-
 
     public void delete_item() {
 
-        TextView etage = (TextView) findViewById (R.id.etage);
-        TextView nblivre = (TextView) findViewById (R.id.nblivre);
-        TextView temps = (TextView) findViewById (R.id.temps);
+        TextView text = (TextView) findViewById (R.id.texte);
         Button valider = (Button) findViewById(R.id.valider);
-        ImageView image = (ImageView) findViewById(R.id.imgm3);
+        ImageView image = (ImageView) findViewById(R.id.imageView3);
         image.setImageResource(R.drawable.gagne);
 
 
         valider.setVisibility(View.GONE);
-        etage.setVisibility(View.GONE);
-        nblivre.setVisibility(View.GONE);
-        temps.setVisibility(View.GONE);
+        text.setVisibility(View.GONE);
 
     }
 }

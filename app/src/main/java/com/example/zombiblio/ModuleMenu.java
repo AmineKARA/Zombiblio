@@ -60,6 +60,9 @@ public class ModuleMenu extends AppCompatActivity {
         ImageButton module4 = (ImageButton) findViewById(R.id.imagem4);
         module4.setOnClickListener(obs);
 
+        ImageButton module5 = (ImageButton) findViewById(R.id.imagem5);
+        module5.setOnClickListener(obs);
+
 
         String value = prefs.getString("filiere_selectionne", "");
 
@@ -100,6 +103,11 @@ public class ModuleMenu extends AppCompatActivity {
                 ImageButton module4 = (ImageButton) findViewById(R.id.imagem4);
                 if(prefs.getInt("module4_win",0)==1){
                     module4.setImageResource(R.drawable.gagner_petit);
+                }
+
+                ImageButton module5 = (ImageButton) findViewById(R.id.imagem5);
+                if(prefs.getInt("module5_win",0)==1){
+                    module5.setImageResource(R.drawable.gagner_petit);
                 }
             }
 

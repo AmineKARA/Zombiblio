@@ -35,6 +35,8 @@
 
         <activity android:name=".Module4" ></activity>
 
+        <activity android:name=".Module5" ></activity>
+
     </application>
 
 

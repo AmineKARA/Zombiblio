@@ -117,16 +117,50 @@ public class Module1 extends AppCompatActivity {
         nbpage.setText(question_realise[0]);
         nbmot.setText(question_realise[1]);
         for (int i=3; i<question_realise.length; i++){
-            if(i==3)
-            coteA.setText(question_realise[3]);
-            if(i==4)
-            coteB.setText(question_realise[4]);
-            if(i==5)
-            coteC.setText(question_realise[5]);
-            if(i==6)
-            coteD.setText(question_realise[6]);
-            if(i==7)
-            coteE.setText(question_realise[7]);
+            if(i==3){
+                if(question_realise[3].equals("--")){
+
+                }else{
+                    coteA.setText(question_realise[3]);
+                }
+            }
+
+            if(i==4) {
+                if (question_realise[4].equals("--")) {
+
+                } else {
+                    coteB.setText(question_realise[4]);
+                }
+
+            }
+
+            if(i==5) {
+                if (question_realise[5].equals("--")) {
+
+                } else {
+                    coteC.setText(question_realise[5]);
+                }
+            }
+
+
+            if(i==6) {
+                if (question_realise[6].equals("--")) {
+
+                } else {
+                    coteD.setText(question_realise[6]);
+                }
+            }
+
+
+            if(i==7) {
+                if (question_realise[7].equals("--")) {
+
+                } else {
+                    coteE.setText(question_realise[7]);
+                }
+
+            }
+
         }
 
 
