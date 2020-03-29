@@ -63,6 +63,9 @@ public class ModuleMenu extends AppCompatActivity {
         ImageButton module5 = (ImageButton) findViewById(R.id.imagem5);
         module5.setOnClickListener(obs);
 
+        ImageButton module6 = (ImageButton) findViewById(R.id.imagem6);
+        module6.setOnClickListener(obs);
+
 
         String value = prefs.getString("filiere_selectionne", "");
 
@@ -108,6 +111,18 @@ public class ModuleMenu extends AppCompatActivity {
                 ImageButton module5 = (ImageButton) findViewById(R.id.imagem5);
                 if(prefs.getInt("module5_win",0)==1){
                     module5.setImageResource(R.drawable.gagner_petit);
+                }
+
+                ImageButton module6 = (ImageButton) findViewById(R.id.imagem6);
+                if(prefs.getInt("module6_win",0)==1){
+                    module6.setImageResource(R.drawable.gagner_petit);
+                }
+
+                if(prefs.getInt("module6_win",0)==1 && prefs.getInt("module5_win",0)==1 && prefs.getInt("module4_win",0)==1 &&
+                prefs.getInt("module2_win",0)==1 && prefs.getInt("module1_win",0)==1){
+                    Intent gagne = new Intent(ModuleMenu.this , Gagne.class);
+                    ModuleMenu.this.startActivity(gagne);
+                    this.cancel();
                 }
             }
 

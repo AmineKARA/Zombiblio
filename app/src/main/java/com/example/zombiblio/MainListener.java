@@ -45,6 +45,12 @@ public class MainListener implements View.OnClickListener {
             this.context.startActivity(intentMod1);
         }
 
+        if(v.getId() == R.id.imagem6){
+
+            Intent intentMod1 = new Intent(this.context , Module6.class);
+            this.context.startActivity(intentMod1);
+        }
+
 
         if(v.getId() == R.id.start){
 
