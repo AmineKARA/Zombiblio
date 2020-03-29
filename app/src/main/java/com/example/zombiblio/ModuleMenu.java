@@ -57,13 +57,16 @@ public class ModuleMenu extends AppCompatActivity {
         ImageButton module2 = (ImageButton) findViewById(R.id.imageButton2);
         module2.setOnClickListener(obs);
 
+        ImageButton module4 = (ImageButton) findViewById(R.id.imagem4);
+        module4.setOnClickListener(obs);
+
 
         String value = prefs.getString("filiere_selectionne", "");
 
         System.out.println(value);
 
 
-        new CountDownTimer(900000000, 1000) {
+        new CountDownTimer(899400000, 1000) {
             //new CountDownTimer(10000, 1000) {
 
             TextView counter = (TextView)  findViewById(R.id.timer);
@@ -92,6 +95,11 @@ public class ModuleMenu extends AppCompatActivity {
                 ImageButton module2 = (ImageButton) findViewById(R.id.imageButton2);
                 if(prefs.getInt("module2_win",0)==1){
                     module2.setImageResource(R.drawable.gagner_petit);
+                }
+
+                ImageButton module4 = (ImageButton) findViewById(R.id.imagem4);
+                if(prefs.getInt("module4_win",0)==1){
+                    module4.setImageResource(R.drawable.gagner_petit);
                 }
             }
 

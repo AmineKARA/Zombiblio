@@ -50,6 +50,7 @@
         android:id="@+id/imagem4"
         android:layout_width="371dp"
         android:layout_height="294dp"
+        android:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.969"

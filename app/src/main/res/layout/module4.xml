@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="193dp"
+        android:layout_height="94dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="264dp"
+        android:layout_marginBottom="1120dp"
+        android:fontFamily="@font/shlop"
+        android:text="TextView"
+        android:textColor="#5C297D"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/nommodule"
+        android:layout_width="196dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="1024dp"
+        android:text="Module n°4"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgm3"
+        android:layout_width="905dp"
+        android:layout_height="826dp"
+        android:layout_marginBottom="292dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/question_m4"
+        tools:layout_editor_absoluteX="-63dp" />
+
+    <EditText
+        android:id="@+id/temps"
+        android:layout_width="109dp"
+        android:layout_height="69dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="500dp"
+        android:backgroundTint="#2073AA"
+        android:ems="10"
+        android:hint="Semaines"
+        android:inputType="numberSigned"
+        android:textColorHighlight="#1C6A9B"
+        android:textColorLink="#2073AA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/nblivre"
+        android:layout_width="109dp"
+        android:layout_height="69dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="676dp"
+        android:backgroundTint="#2073AA"
+        android:ems="10"
+        android:hint="Livre"
+        android:inputType="numberSigned"
+        android:textColorHighlight="#1C6A9B"
+        android:textColorLink="#2073AA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/etage"
+        android:layout_width="109dp"
+        android:layout_height="69dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="812dp"
+        android:backgroundTint="#2073AA"
+        android:ems="10"
+        android:hint="Etage"
+        android:inputType="numberSigned"
+        android:textColorHighlight="#1C6A9B"
+        android:textColorLink="#2073AA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/valider"
+        android:layout_width="170dp"
+        android:layout_height="71dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="524dp"
+        android:layout_marginBottom="208dp"
+        android:background="#5C297D"
+        android:fontFamily="@font/shlop"
+        android:shadowColor="#000000"
+        android:text="Valider"
+        android:textColor="#25FF00"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/retour"
+        android:layout_width="170dp"
+        android:layout_height="71dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="208dp"
+        android:background="#5C297D"
+        android:fontFamily="@font/shlop"
+        android:shadowColor="#000000"
+        android:text="Retour"
+        android:textColor="#25FF00"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
