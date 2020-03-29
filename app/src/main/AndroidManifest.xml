@@ -30,6 +30,8 @@
         <activity android:name=".SelectFiliere" ></activity>
 
         <activity android:name=".Perdu" ></activity>
+
+        <activity android:name=".Module2" ></activity>
     </application>
 
 

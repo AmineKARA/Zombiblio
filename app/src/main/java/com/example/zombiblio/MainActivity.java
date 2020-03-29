@@ -87,21 +87,55 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            GetQuestion question = new GetQuestion("informatique");
-
-            try {
-                question.execute().get();
-
-                str_question = question.getResponseMsg();
-
-                Log.d("Question", str_question);
-                ecrireFichier("informatique_module1.txt", str_question);
+            String filieres= lireFichier("filiere.txt");
+            String[] separated = filieres.split("/");
 
 
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            /*MODULE 1*/
+            for(int i=0;i<separated.length-1;i++) {
+
+
+                GetQuestion question = new GetQuestion(separated[i]);
+
+                try {
+                    question.execute().get();
+
+
+                    str_question = question.getResponseMsg();
+
+                    //Log.d("Question", str_question);
+                    ecrireFichier(separated[i]+"_module1.txt", str_question);
+
+
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
+        /*MODULE 2*/
+            for(int i=0;i<separated.length-1;i++) {
+
+
+                GetQuestionModuleD question_m2 = new GetQuestionModuleD(separated[i]);
+
+                try {
+                    question_m2.execute().get();
+
+
+                    str_question = question_m2.getResponseMsg();
+
+                    Log.d("Question", str_question);
+                    ecrireFichier(separated[i]+"_module2.txt", str_question);
+
+
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
 
         }
@@ -138,6 +172,45 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public String lireFichier(String name)
+    {
+        FileInputStream fileInputStream = null;
+        StringBuilder stringBuilder = null;
+
+        try {
+            fileInputStream = openFileInput(name);
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+            stringBuilder = new StringBuilder();
+            String line;
+
+            while((line = bufferedReader.readLine()) != null){
+                stringBuilder.append(line + "\n");
+            }
+
+            //Log.d("RES :", line.toString());
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fileInputStream != null)
+                try {
+                    fileInputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+        }
+
+        if (stringBuilder != null) {
+            System.out.println(stringBuilder);
+            return String.valueOf(stringBuilder);
+        }else
+            System.err.println("stringBuilder est null");
+        return "vide";
+    }
 
 
 

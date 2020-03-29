@@ -37,8 +37,8 @@ public class IntroListener implements View.OnClickListener {
             }else{
                 //ACCES AU MENU DES MODULES
                 //Toast.makeText(context, "Redirection vers les modules", Toast.LENGTH_LONG).show();
-                Intent moduleMenu = new Intent(this.context , ModuleMenu.class);
-                this.context.startActivity(moduleMenu);
+                Intent selectfil = new Intent(this.context , SelectFiliere.class);
+                this.context.startActivity(selectfil);
             }
 
         }

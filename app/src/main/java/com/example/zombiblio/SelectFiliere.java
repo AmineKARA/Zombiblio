@@ -91,11 +91,6 @@ public class SelectFiliere extends AppCompatActivity {
 
     }
 
-    public void startModule(){
-
-
-    }
-
 
     public String lireFichier(String name)
     {

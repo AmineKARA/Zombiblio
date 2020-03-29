@@ -70,7 +70,6 @@ public class Module1 extends AppCompatActivity {
             System.out.println(separated[i]);
         }
 
-
         /*--------------------------------*/
 
 
@@ -106,9 +105,9 @@ public class Module1 extends AppCompatActivity {
         TextView coteD = (TextView) findViewById (R.id.coteD);
         TextView coteE = (TextView) findViewById (R.id.coteE);
 
-
-
         /*--------------------*/
+
+
 
 
         /*LECTURE SUITE*/
@@ -132,15 +131,6 @@ public class Module1 extends AppCompatActivity {
 
 
         /*-----------------------*/
-
-        String test = prefs.getString("questresp","");
-        System.out.println(test);
-
-
-
-
-
-
 
 
 
@@ -207,6 +197,8 @@ public class Module1 extends AppCompatActivity {
             }
 
             public void onFinish() {
+                Intent perdu = new Intent(Module1.this , Perdu.class);
+                Module1.this.startActivity(perdu);
                 //counter.setText("done!");
             }
         }.start();
@@ -248,13 +240,7 @@ public class Module1 extends AppCompatActivity {
 
     }
 
-    protected void getSharedPref(){
 
-        SharedPreferences prefs = getApplicationContext().getSharedPreferences("Time", MODE_PRIVATE);
-        long milis = prefs.getLong("milis", 0); //0 is the default value.
-
-        Log.d("SHARED","Value :"+milis);
-    }
 
     public String lireFichier(String name)
     {
