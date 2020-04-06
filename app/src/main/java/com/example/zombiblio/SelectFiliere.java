@@ -57,7 +57,7 @@ public class SelectFiliere extends AppCompatActivity {
             myButton.setText(separated[i]);
             myButton.setHeight(200);
             myButton.setId(i);
-            myButton.setTextSize(80);
+            myButton.setTextSize(50);
             Typeface typeface = ResourcesCompat.getFont(this, R.font.shlop);
             myButton.setTypeface(typeface);
 
